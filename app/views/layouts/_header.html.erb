@@ -19,6 +19,8 @@
             <% unless logged_in? %>
               <li><%= link_to "新規登録", signup_path %></li>
               <li><%= link_to "ログイン", login_path %></li>
+              <li><%= link_to "持ってるものランキング", ranking_have_path %></li>
+              <li><%= link_to "欲しいものランキング", ranking_want_path %></li>
             <% else %>
               <li>
                 <%= link_to new_item_path do %>
@@ -26,6 +28,8 @@
                   アイテムを追加
                 <% end %>
               </li>
+              <li><%= link_to "持ってるものランキング", ranking_have_path %></li>
+              <li><%= link_to "欲しいものランキング", ranking_want_path %></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                   <span class="gravatar">
